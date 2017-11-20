@@ -84,8 +84,9 @@ class ViewController: NSViewController {
 
     @IBAction func Set(_ sender: NSButtonCell) {
         let proc = Process()
-        proc.launchPath = "/Applications/StartNginx.app/Contents/MacOS/applet"
+        proc.launchPath = "/Applications/StartNginx.app/Contents/MacOS/applet user name 'daniel' password '0tucamis' with administrator privileges"
         proc.launch()
+        
         
         // writing nginx config file
         do {
@@ -94,6 +95,7 @@ class ViewController: NSViewController {
             try replaced.write(to: nginxURL, atomically: true, encoding: String.Encoding.utf8)
             //messageText.stringValue =  facebookURL.absoluteString
             messageText.stringValue = "Done."
+    
             
         }
         catch {
